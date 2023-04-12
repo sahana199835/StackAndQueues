@@ -1,17 +1,17 @@
 package com.bridgelabz.stacksandqueues;
 
 import java.util.EmptyStackException;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class StacksAndQueues {
 	
-	static void pushData(Stack stack, int a ) {
-		 stack.push(new Integer(a));
-		 System.out.println("Push(" + a + ")");
-		 System.out.println("Stack: " + stack);
-		
-
-	 }
+	static void pushData(Stack stack, int a) {
+		stack.push(new Integer(a));
+		System.out.println("Push(" + a + ")");
+		System.out.println("Stack :" + stack);
+	}
 
 	static void popData(Stack stack) {
 
@@ -34,8 +34,12 @@ public class StacksAndQueues {
 		popData(stack);
 		popData(stack);
 		popData(stack);
+		Queue<Integer> queue = new LinkedList<>();
 
 		System.out.println("Check the stack is empty or not ? " + stack.empty());
+		queue.add(56);
+		queue.add(30);
+		queue.add(70);
 
 		try {
 			stack.pop();
@@ -48,8 +52,9 @@ public class StacksAndQueues {
 		} catch (EmptyStackException e) {
 			System.out.println("Stack is empty");
 		}
+		System.out.println("The Queue elements are : " + queue);
+		System.out.println("The Peek element is :" + queue.peek());
 
 	}
+
 }
-
-
